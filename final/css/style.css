@@ -1,0 +1,459 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* Utilities */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Palette */
+/* 
+    dark brown #4A2806ff
+    orange #F2790F
+    light brown #753E0Dff
+    dark green #064025
+    eggshell #F2F1DF
+*/
+
+/* Fonts */
+/* 
+    font-family: 'Inter', sans-serif;
+    font-family: 'Libre Caslon Display', serif;
+    font-family: 'Pacifico', cursive; 
+*/
+
+/* Structure */
+
+body {
+    background-image: url(../images/leaves.jpg);
+    /* Background  
+        https://pngtree.com/freebackground/autumn-fall-leaves-pattern-seamless-background_1544471.html 
+        pngtree.com */
+}
+
+header {
+    width: 100%;
+    margin: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4)), url(../images/hoffmann-psl.jpg);
+    /* 
+    Header image from James Hoffmann's website
+        https://www.jameshoffmann.co.uk/
+    */
+    background-size: cover;
+    background-position: center;
+    padding: 10em 0;
+}
+
+section {
+    background-color: #F2F1DF;
+    padding: 1em;
+}
+
+.article {
+    margin: 1em 1em 2em;
+    text-align: left;
+}
+
+/* Decorative Elements */
+
+.bar {
+    width: 100%;
+    background-color: #F2F1DF;
+}
+
+/* Typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.3em;
+    font-variant: small-caps;
+    font-family: 'Libre Caslon Display', serif;
+    /* You need to learn right now that I am a sucker for Libre Caslon and /will/ use it given the opportunity */
+    font-weight: 800;
+}
+
+p,
+figcaption,
+li,
+td {
+    line-height: 1.8em;
+    /* Increased line height because I switched to a sans-serif */
+    color: #4A2806ff;
+    font-family: 'Inter', sans-serif;
+}
+
+header h1,
+header h2 {
+    color: #F2F1DF;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 48px;
+}
+
+header h2 {
+    font-size: 40px;
+    font-family: 'Pacifico', cursive;
+    font-variant: none;
+    color: rgb(241, 205, 132);
+}
+
+.bar h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 30px;
+    padding: 1em 0;
+    margin: 0 1em;
+    color: #F2790F;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 8px dotted #753E0Dff;
+}
+
+h3 {
+    padding: 2.5em 0 1em;
+    text-align: center;
+    font-size: 20px;
+    color: #064025;
+}
+
+a {
+    text-decoration: none;
+}
+
+section a,
+section a:visited {
+    color: #038C65;
+}
+
+section a:hover,
+section a:active {
+    color: #064025;
+}
+
+.emojis {
+    font-size: 32px;
+    text-align: center;
+    padding: 1em 0;
+}
+
+figcaption {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section p {
+    padding: 0 0 0.8em;
+}
+
+.dateline {
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.author {
+    margin: 0 0 1em;
+}
+
+.credit {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Images, Tables */
+
+.youtube {
+    display: none;
+    /* Doesn't work in mobile not going to deal with it */
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+figure {
+    margin: 0;
+    padding: 1em;
+}
+
+.rounded-corner {
+    border-radius: 20px;
+}
+
+table {
+    margin: 1em auto 2em;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 5px solid #F2F1DF;
+    padding: 0.5em 5em;
+}
+
+th {
+    background-color: #064025;
+    color: #F2F1DF;
+    text-align: right;
+    padding-right: 1.3em;
+}
+
+td {
+    color: #064025;
+    text-align: left;
+    padding-left: 1.3em;
+    padding-right: 1.3em;
+}
+
+/* List Nonsense */
+
+li {
+    padding: 0 0.5em 1.5em;
+}
+
+ul li {
+    padding: 0 0.5em 0.5em;
+}
+
+ul {
+    margin-left: 1em;
+}
+
+.spice {
+    list-style: "\1F330";
+    /* Nutmeg emoji */
+}
+
+.syrup {
+    list-style: "\1F383";
+    /* Pumpkin emoji */
+}
+
+.cream {
+    list-style: "\1F366";
+    /* Soft Serve Emoji */
+}
+
+ol li::marker {
+    font-weight: bold;
+    color: rgb(216, 119, 8);
+    /* This bolds & changes the color of the numbers */
+}
+
+.subitem {
+    list-style: "\2615";
+    padding: 0.5em 0.5em 0em;
+    /* Coffee cup emoji */
+}
+
+.no-pad {
+    padding-bottom: 0;
+    /* If i don't do this the 4th list item is pushed way too far down */
+}
+
+.ps {
+    border-bottom: 8px dotted #753E0Dff;
+}
+
+/* Footer */
+
+footer {
+    background-color: #064025;
+    margin: 0;
+    padding: 2em;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    color: #F2F1DF;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0.5em;
+}
+
+footer a,
+footer a:visited {
+    color: #F2790F;
+}
+
+footer a:active,
+footer a:hover {
+    color: rgb(251, 196, 133);
+}
+
+/* Tablets */
+
+@media (min-width: 650px) {
+
+    /* Tablet Structure */
+
+    header {
+        background-position: center 80%;
+        padding: 13em 0;
+    }
+
+    section {
+        margin: 0 2em;
+    }
+
+    .article {
+        margin: 2em 4em;
+    }
+
+    /* Tablet Decorative */
+
+    .divider {
+        padding: 0.5em;
+        margin: 0 3em;
+        background-color: #064025;
+        border-top: 5px solid #038C65;
+        border-left: 5px solid #038C65;
+        border-bottom: 5px solid #012112;
+        border-right: 5px solid #012112;
+    }
+
+    .bar {
+        background-color: #F2F1DF;
+    }
+
+    /* Tablet Typography */
+
+    h1 {
+        font-size: 84px;
+    }
+
+    header h2 {
+        font-size: 64px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .bar h2 {
+        border: none;
+        font-size: 36px;
+    }
+
+    /* Tablet Images, tables etc. */
+
+    iframe {
+        border: none;
+    }
+
+    .youtube {
+        display: block;
+        text-align: center;
+        /* I don't know why this is how it works but it works so im not going to mess with it */
+    }
+
+    .youtube figcaption {
+        font-size: 18px;
+    }
+
+    figure {
+        margin: 0 2em;
+        padding: 1em;
+    }
+
+    /* Tablet lists */
+
+    .instructions {
+        margin: 1em 4em;
+    }
+
+    ul {
+        margin-left: 3em;
+    }
+
+}
+
+/* Large screens / Desktops etc. */
+
+@media (min-width: 1200px) {
+
+    /* Desktop Structure */
+
+    section {
+        width: 70%;
+        margin: 0 auto;
+        background-color: #F2F1DF;
+        padding: 1em 3em 1em;
+    }
+
+    .article {
+        margin: 2em 8em;
+    }
+
+    /* Desktop Typography */
+
+    h1 {
+        font-size: 100px;
+    }
+
+    header h2 {
+        font-size: 80px;
+    }
+
+    .bar h2 {
+        font-size: 48px;
+    }
+
+    .credit {
+        margin-top: 2em;
+    }
+
+    /* Desktop images */
+
+    figure {
+        margin: 0;
+    }
+
+    .instructions {
+        margin: 1em 6em;
+    }
+
+    /* Desktop only */
+
+    .float-right {
+        float: right;
+        width: 50%;
+        padding: 1em 3em;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .float-left {
+        float: left;
+        width: 50%;
+        padding: 1em 3em;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
